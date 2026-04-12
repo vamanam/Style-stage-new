@@ -1,0 +1,47 @@
+.page-footer {
+  --logomark-height: 2.1rem;
+  --logomark-padding: 0;
+
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  color: var(--color-light);
+
+  &::before {
+    @include logomark;
+
+    position: absolute;
+    left: 50%;
+    width: 2.2em;
+    transform: translate(-50%, -100%);
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-size: 2.6rem;
+    content: "S";
+  }
+
+  p:first-child {
+    margin-top: 3rem;
+    font-weight: var(--font-weight-strong);
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+
+  p a {
+    color: inherit;
+  }
+
+  ul {
+    margin: 2rem auto;
+    width: min(100%, 60ch);
+    grid-template-columns: repeat(auto-fit, minmax(12ch, 1fr));
+  }
+
+  .container > :last-child {
+    margin-bottom: 0;
+  }
+}

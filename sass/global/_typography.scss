@@ -4,18 +4,20 @@ h3,
 h4 {
   font-weight: var(--font-weight-strong);
   line-height: 1;
-  margin-bottom: 0.65em;
+  margin-bottom: 10px;
 }
 
 h1 {
   font-size: var(--font-size-h1);
   font-size: clamp(2rem, 7vw, var(--font-size-h1));
+  color: var(--accent);
 }
 
 h2 {
   font-size: var(--font-size-h2);
   font-size: clamp(2rem, 4vw, var(--font-size-h2));
   text-align: center;
+  color: var(--accent);
 }
 
 #main h2 {
@@ -40,6 +42,12 @@ li {
 
 p {
   margin: 0 0 1rem;
+  opacity: 0.85;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
 }
 
 article .container {

@@ -1,0 +1,67 @@
+header {
+  --logomark-height: 3.6rem;
+  --logomark-padding: 0 1.25rem;
+
+  display: grid;
+  min-height: 50vh;
+  place-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(240, 201, 91, 0.16), transparent 22%),
+    radial-gradient(circle at 82% 18%, rgba(142, 115, 255, 0.14), transparent 22%),
+    radial-gradient(circle at 50% 75%, rgba(255, 255, 255, 0.04), transparent 24%);
+  color: var(--color-light);
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'><path fill='%23ffffff22' d='M0,160L60,186.7C120,213,240,267,360,266.7C480,267,600,213,720,202.7C840,192,960,224,1080,218.7C1200,213,1320,171,1380,149.3L1440,128V320H0Z'/></svg>");
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.08), transparent 18%);
+    content: "";
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  h1 {
+    @include logomark;
+    font-size: clamp(3rem, 7vw, 6rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--color-light);
+    z-index: 1;
+  }
+
+  h2 {
+    margin: 1.5rem auto 0;
+    max-width: 38ch;
+    color: var(--color-gray);
+    font-weight: 400;
+    z-index: 1;
+  }
+
+  p {
+    margin: 1.5rem auto 0;
+    max-width: 50ch;
+    color: var(--color-gray);
+    opacity: 0.8;
+    z-index: 1;
+  }
+}

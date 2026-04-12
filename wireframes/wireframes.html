@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframes - Stage Spotlight</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .wireframes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .wireframe {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .wireframe h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 18px;
+        }
+        
+        .wireframe-frame {
+            border: 2px dashed #999;
+            aspect-ratio: 9 / 16;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .wireframe-frame.desktop {
+            aspect-ratio: 16 / 9;
+        }
+        
+        .wire-section {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            font-size: 12px;
+            color: #666;
+            background: #fafafa;
+        }
+        
+        .wire-header {
+            background: #e8d4f0 !important;
+            color: #333 !important;
+            font-weight: bold;
+        }
+        
+        .wire-nav {
+            background: #f0e8d4 !important;
+            color: #333 !important;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 10px;
+        }
+        
+        .wire-content {
+            background: #d4e8f0 !important;
+            color: #333 !important;
+        }
+        
+        .wire-footer {
+            background: #e8d4f0 !important;
+            color: #333 !important;
+            font-weight: bold;
+        }
+        
+        .legend {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+        
+        .legend h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            margin-right: 15px;
+            border: 1px solid #ccc;
+        }
+        
+        @media (max-width: 768px) {
+            .wireframes {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎭 Stage Spotlight - Wireframes</h1>
+        
+        <div class="wireframes">
+            <!-- Desktop Wireframe -->
+            <div class="wireframe">
+                <h2>Desktop (1200px+)</h2>
+                <div class="wireframe-frame desktop">
+                    <div class="wire-section wire-header" style="flex: 0 0 120px;">
+                        HEADER - Style Stage Hero
+                    </div>
+                    <div class="wire-section wire-nav" style="flex: 0 0 40px;">
+                        NAVIGATION - About | Guidelines | Contribute | Files | Styles | Resources
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; flex: 1; gap: 8px; padding: 8px;">
+                        <div class="wire-section wire-content">Section 1 (Glass Card)</div>
+                        <div class="wire-section wire-content">Section 2 (Glass Card)</div>
+                        <div class="wire-section wire-content">Section 3 (Glass Card)</div>
+                        <div class="wire-section wire-content">Section 4 (Glass Card)</div>
+                    </div>
+                    <div class="wire-section wire-footer" style="flex: 0 0 80px;">
+                        FOOTER - Links & Info
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Wireframe -->
+            <div class="wireframe">
+                <h2>Mobile (375px)</h2>
+                <div class="wireframe-frame">
+                    <div class="wire-section wire-header" style="flex: 0 0 100px;">
+                        HEADER - Style Stage
+                    </div>
+                    <div class="wire-section wire-nav" style="flex: 0 0 50px;">
+                        NAV
+                    </div>
+                    <div class="wire-section wire-content">
+                        Section 1
+                    </div>
+                    <div class="wire-section wire-content">
+                        Section 2
+                    </div>
+                    <div class="wire-section wire-content">
+                        Section 3
+                    </div>
+                    <div class="wire-section wire-content">
+                        Section 4
+                    </div>
+                    <div class="wire-section wire-footer" style="flex: 0 0 60px;">
+                        FOOTER
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Legend -->
+        <div class="legend">
+            <h3>Color Legend</h3>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #e8d4f0;"></div>
+                <span><strong>Header/Footer</strong> - Hero section & footer with glass effects</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #f0e8d4;"></div>
+                <span><strong>Navigation</strong> - Sticky nav with smooth underlines</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #d4e8f0;"></div>
+                <span><strong>Content Sections</strong> - Glass cards with animations & hover effects</span>
+            </div>
+            
+            <h3 style="margin-top: 20px;">Key Features</h3>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Glass Morphism:</strong> Frosted glass effect with backdrop blur on all major sections</li>
+                <li><strong>Animations:</strong> Fade-in on load with staggered delays, smooth hover transitions</li>
+                <li><strong>Responsive:</strong> Single column (mobile) → 2-column grid (desktop 768px+)</li>
+                <li><strong>Colors:</strong> Dark background (#070914) with gold (#f0c95b) & purple (#8e73ff) accents</li>
+                <li><strong>Accessibility:</strong> Keyboard navigation, high contrast, semantic HTML</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

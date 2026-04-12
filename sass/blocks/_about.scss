@@ -1,0 +1,45 @@
+#about {
+  section:nth-child(2) {
+    position: relative;
+    padding-top: 5rem;
+
+    p:nth-of-type(2) {
+      align-self: center;
+      margin-top: 2rem;
+      color: var(--color-primary-alt);
+      font-size: 1.5em;
+      font-weight: var(--font-weight-strong);
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.5rem 0 2rem;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 0.25em;
+        padding: 0.45em 0.85em;
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      height: 80%;
+      transform: translate(-50%, -50%);
+      background-image: radial-gradient(circle, rgba(240, 201, 91, 0.16), transparent 45%), radial-gradient(circle, rgba(142, 115, 255, 0.1), transparent 35%);
+      content: "";
+      z-index: -1;
+    }
+  }
+}

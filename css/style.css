@@ -266,7 +266,6 @@ article,
   main {
     padding-top: 3rem;
   }
-
   article section {
     padding: 2rem 1rem;
   }
@@ -691,11 +690,9 @@ a:focus::after {
   main {
     grid-template-columns: repeat(2, 1fr);
   }
-
   header h1 {
     font-size: 1.8rem;
   }
-
   article section {
     padding: 2rem 1rem;
   }
@@ -707,7 +704,7 @@ a:focus::after {
 }
 @media (min-width: 515px) and (max-width: 765px) {
   #styles .features li:nth-last-child(1):nth-child(odd),
-.features.patterned li:nth-last-child(1):nth-child(odd) {
+  .features.patterned li:nth-last-child(1):nth-child(odd) {
     grid-column: span 2;
   }
 }
@@ -929,4 +926,4 @@ a:focus::after {
   height: 1em;
   margin-right: 0.25em;
   fill: currentColor;
-}
+}/*# sourceMappingURL=style.css.map */
